@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+};
+
+#content {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2rem 7rem 1rem;
+};
+
+.main {
+    height: 100%;
+    background-color: brown;
+};
