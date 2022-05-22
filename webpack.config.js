@@ -1,9 +1,15 @@
 const path = require('path');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: './src/main.js',
+    mode: 'development',
+    entry: './src/index.js',
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Output Management',
+        }),
+    ],
     output: {
-        filename: 'bundle.js',
+        filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -15,11 +21,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-              },
-              {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-              },
+            },
         ],
     },
 };
