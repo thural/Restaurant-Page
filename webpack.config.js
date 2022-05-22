@@ -11,7 +11,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management',
-            template: './dist/index.html',
+            template: './src/index.html',
             inject: 'body',
             alwaysWriteToDisk: true
         }),
