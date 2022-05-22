@@ -3,7 +3,7 @@
 //import contact from './contact'
 //import logo from './GitHub-Mark-32px.png'
 //import bck from './WhalesDiner.jpg'
-//import './style.css'
+import './style.css'
 
 
 //const backgroundd = new Image();
@@ -14,7 +14,7 @@ const content = document.getElementById('content');
 content.textContent = 'SCRIPT WORKING';
 
 
-/*
+
 //header
 const header = document.createElement('header');
 
@@ -49,7 +49,7 @@ content.appendChild(main);
 
 
 
-
+/*
 
 const footer = document.createElement('footer');
 
