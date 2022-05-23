@@ -29,7 +29,6 @@ let beverageItems = [
 ];
 
 const createULfromArray = (parentElem, array) => {
-
     const list = document.createElement('ul');
 
     array.forEach(elem => {
@@ -39,8 +38,6 @@ const createULfromArray = (parentElem, array) => {
     });
 
     parentElem.appendChild(list)
-
-    console.log(parentElem);
 };
 
 const menu = () => {

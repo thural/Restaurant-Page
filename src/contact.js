@@ -9,6 +9,11 @@ const contact = () => {
     const content = document.createElement('div');
     content.classList.add('contact');
 
+    const anchorOne = document.createElement('a');
+    anchorOne.setAttribute('href', 'https://en.wikipedia.org/wiki/Life_Is_Strange:_Before_the_Storm');
+    anchorOne.textContent = `"Life is Strange" ...call us Before the Storm`;
+    content.appendChild(anchorOne);
+
     const phone = document.createElement('p');
     phone.textContent = '📞 123 456 789';
 

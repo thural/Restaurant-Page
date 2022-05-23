@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Fugaz+One&family=Lora:ital@1&display=swap');
 
-
+:root {
+    --bg-color: rgba(255, 192, 203, 0.959);
+  }
+  
 body {
+    font-family: "Helvetica Neue", "Segoe UI", "Open Sans", sans-serif;
+    background-image: url('WhalesDiner.jpg');
+    grid-template-rows: 2fr 12fr 1fr;
+    background-size: cover;
     font-size: 16px;
     height: 100vh;
     display: grid;
-    grid-template-rows: 2fr 12fr 1fr;
     margin: auto;
-
-    background-image: url('WhalesDiner.jpg');
-    background-size: cover;
-
-    font-family: "Helvetica Neue", "Segoe UI", "Open Sans", sans-serif;
 }    
 
 header {
@@ -28,12 +29,16 @@ h1 {
     font-size: 3rem;
     font-family: 'Lobster Two', cursive;
     font-style: italic;
-    color: rgb(255, 240, 242);
+    color: rgb(221, 221, 221);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 nav {
     display: flex;
-    gap: 1.8rem;
 }
 
 .btn {
@@ -44,8 +49,20 @@ nav {
     width: fit-content;
     padding: 1rem;
     height: .5rem;
-    background-color: lightcoral;
     border-bottom: 0px;
+    background-color: black;
+    color: aliceblue;
+}
+
+.btn:hover {
+    background-color: rgba(199, 199, 199, 0.507);
+    border-radius: 10px 10px 0px 0px;
+    color: black;
+}
+
+.btn.clicked {
+    background-color: rgb(199, 199, 199);
+    color: black;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -73,6 +90,7 @@ main h2 {
     align-items: center;
     flex-direction: column;
 }
+
 .home > img {
     position: relative;
     width: 100%;
@@ -90,11 +108,11 @@ main h2 {
     font-size: 2rem;
     width: clamp(auto, 50%, 80%);
     border-radius: 2rem;
-    background-color: rgba(255, 192, 203, 0.85);
-    
+    background-color: var(--bg-color);
 }
 
 .menu {
+    padding: 1.2rem 0 1.2rem 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -112,17 +130,17 @@ main h2 {
     font-size: 2rem;
     width: clamp(320px, 50%, 80%);
     border-radius: 2rem;
-    background-color: rgba(255, 192, 203, 0.85);
+    background-color: var(--bg-color);
 }
 
 .contact {
-    width: clamp(400px, 50%, 80%);
+    width: clamp(480px, 50%, 80%);
     height: fit-content;
     display: flex;
     flex-direction: column;
     margin: 1rem;
     padding: 2rem;
-    background-color: rgba(255, 192, 203, 0.85);
+    background-color: var(--bg-color);
 }
 
 footer {
@@ -162,5 +180,5 @@ footer > * {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 192, 203, 0.85);
+    background: var(--bg-color);
   }
