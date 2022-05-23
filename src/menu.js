@@ -67,6 +67,8 @@ const menu = () => {
     createULfromArray(beverages, beverageItems);
     content.appendChild(beverages);
 
+    content.classList.add('menu');
+
     return content
 };
 

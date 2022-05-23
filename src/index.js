@@ -1,15 +1,23 @@
 import home from './home'
 //import menu from './menu'
-//import contact from './contact'
+import contact from './contact'
 import logo from './GitHub-Mark-32px.png'
 //import bck from './WhalesDiner.jpg'
 import './style.css'
 import menu from './menu';
 
 
+const loadPage = (page) => {
+    const appendTabs = {
+        'home': () => main.append(home),
+        'menu': () => main.append(menu),
+        'contact': () =>  main.append(contact)
+    };
+    main.firstChild.remove();
+    appendTabs[page]()
+
+}
 const body = document.body;
-
-
 
 //header
 const header = document.createElement('header');
@@ -22,17 +30,17 @@ const nav = document.createElement('nav');
 
 const homeBtn = document.createElement('div');
 homeBtn.classList.add('btn');
-homeBtn.textContent = 'Home';
+homeBtn.textContent = 'home';
 nav.appendChild(homeBtn);
 
 const menuBtn = document.createElement('div');
 menuBtn.classList.add('btn');
-menuBtn.textContent = 'Menu';
+menuBtn.textContent = 'menu';
 nav.appendChild(menuBtn);
 
 const contactBtn = document.createElement('div');
 contactBtn.classList.add('btn');
-contactBtn.textContent = 'Contact';
+contactBtn.textContent = 'contact';
 
 nav.appendChild(contactBtn);
 header.appendChild(nav);
@@ -42,7 +50,6 @@ body.appendChild(header);
 const main = document.createElement('main');
 body.appendChild(main);
 main.append(menu);
-main.firstChild.classList.add('content');
 
 //footer
 const footer = document.createElement('footer');
@@ -58,3 +65,9 @@ icon.src = logo;
 copyright.appendChild(icon);
 footer.appendChild(copyright);
 body.appendChild(footer);
+
+const tabBtns = document.querySelectorAll('.btn');
+
+tabBtns.forEach(button => button.addEventListener('click', e => {
+    loadPage(e.target.textContent)
+}));

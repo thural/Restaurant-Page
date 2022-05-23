@@ -24,7 +24,8 @@ header {
 }
 
 h1 {
-    font-size: 2rem;
+    margin: 1rem;
+    font-size: 3rem;
     font-family: 'Lobster Two', cursive;
     font-style: italic;
     color: rgb(255, 240, 242);
@@ -49,28 +50,12 @@ nav {
 }
 
 main {
-    padding: 1rem;
-    font-family: 'Lobster Two', cursive;
-    font-weight: 100;
     display: flex;
-    font-size: 1rem;
-    justify-content: center;
-    overflow:auto;
-}
-
-.content {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-}
-
-.content > * {
-    margin: 1rem;
-    padding: 2rem;
-    font-size: 2rem;
-    max-width: 80%;
-    border-radius: 2rem;
-    background-color: rgba(255, 192, 203, 0.85);
+    align-items: center;
+    font-weight: 100;
+    font-size: 1rem;
+    overflow:auto;
 }
 
 main ul {
@@ -80,6 +65,64 @@ main ul {
 main h2 {
     margin-top: 0px;
     margin-bottom: 1rem;
+}
+
+.home {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.home > img {
+    position: relative;
+    width: 100%;
+}
+
+.home > p {
+    font-family: 'Lobster Two', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    margin: 1rem;
+    padding: 2rem;
+    font-size: 2rem;
+    width: clamp(auto, 50%, 80%);
+    border-radius: 2rem;
+    background-color: rgba(255, 192, 203, 0.85);
+    
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 100;
+    font-size: 1rem;
+    overflow: auto;
+}
+
+.menu > * {
+    font-weight: 100;
+    margin: 1rem;
+    padding: 2rem;
+    font-size: 2rem;
+    width: clamp(320px, 50%, 80%);
+    border-radius: 2rem;
+    background-color: rgba(255, 192, 203, 0.85);
+}
+
+.contact {
+    width: clamp(400px, 50%, 80%);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: rgba(255, 192, 203, 0.85);
 }
 
 footer {
@@ -105,7 +148,19 @@ footer > * {
     gap: 1rem;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
 
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.164);
+  }
 
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 192, 203, 0.541);
+    border-radius: 10px;
+  }
 
-
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 192, 203, 0.85);
+  }
