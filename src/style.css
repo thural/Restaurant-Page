@@ -57,6 +57,7 @@ nav {
 .btn:hover {
     background-color: rgba(199, 199, 199, 0.507);
     border-radius: 10px 10px 0px 0px;
+    cursor: pointer
     color: black;
 }
 
